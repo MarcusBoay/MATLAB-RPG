@@ -1,0 +1,107 @@
+classdef map
+    properties
+        mapindex
+        xpos
+        ypos
+        xlength
+        ylength
+        img
+        obj1
+        obj2
+        obj3
+        obj4
+        obj5
+        b_down
+        b_up
+        b_left
+        b_right
+    end
+    methods
+        function out=map(m,x,y,xl,yl,i,o1,o2,o3,o4,o5,b1,b2,b3,b4)
+            out.mapindex=m;
+            out.xpos=x;
+            out.ypos=y;
+            out.xlength=xl;
+            out.ylength=yl;
+            out.img=i;
+            out.obj1=o1;
+            out.obj2=o2;
+            out.obj3=o3;
+            out.obj4=o4;
+            out.obj5=o5;
+            out.b_down=b1;
+            out.b_up=b2;
+            out.b_left=b3;
+            out.b_right=b4;
+        end
+        function mapout=setmap(mapout,playerguy)
+            if mapout.mapindex~=1&&playerguy.xpos<=130&&playerguy.xpos>=0&&playerguy.ypos<=80&&playerguy.ypos>=0;
+                mapout=map(1,0,0,140,90,imread('bckimg1.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,0:5:130,0,0,0,0);
+                mapout.b_up=myobject(0,0,0,5,80,0,0,0);
+                mapout.b_left=myobject(0,0,0,0,0:5:80,0,0,0);
+                mapout.b_right=myobject(0,0,0,130,0:5:80,0,0,0);
+                mapout.obj1=myobject(false,true,0,40,30,10,10,imread('obs3.png'));
+                mapout.obj2=myobject(false,true,0,80,30,10,10,imread('obs3.png'));
+                mapout.obj3=myobject(false,true,0,60,50,10,10,imread('obs4.png'));
+                mapout.obj4=myobject(true,true,1,50,70,10,10,imread('obs5.png'));
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            elseif mapout.mapindex~=2&&playerguy.xpos<=130&&playerguy.xpos>=0&&playerguy.ypos<=170&&playerguy.ypos>=90;
+                mapout=map(2,0,90,140,90,imread('bckimg2.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,5,90,0,0,0);
+                mapout.b_up=myobject(0,0,0,5,170,0,0,0);
+                mapout.b_left=myobject(0,0,0,0,90:5:170,0,0,0);
+                mapout.b_right=myobject(0,0,0,130,90:5:170,0,0,0);
+                mapout.obj1=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj2=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj3=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj4=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            elseif mapout.mapindex~=3&&playerguy.xpos<=130&&playerguy.xpos>=0&&playerguy.ypos<=260&&playerguy.ypos>=180;
+                mapout=map(3,0,180,140,90,imread('bckimg3.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,5,180,0,0,0);
+                mapout.b_up=myobject(0,0,0,0:5:130,260,0,0,0);
+                mapout.b_left=myobject(0,0,0,0,180:5:260,0,0,0);
+                mapout.b_right=myobject(0,0,0,170,5,0,0,0);
+                mapout.obj1=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj2=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj3=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj4=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            elseif mapout.mapindex~=4&&playerguy.xpos<=270&&playerguy.xpos>=140&&playerguy.ypos<=260&&playerguy.ypos>=180;
+                mapout=map(4,140,180,140,90,imread('bckimg4.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,140:5:270,180,0,0,0);
+                mapout.b_up=myobject(0,0,0,140:5:270,260,0,0,0);
+                mapout.b_left=myobject(0,0,0,140,5,0,0,0);
+                mapout.b_right=myobject(0,0,0,270,5,0,0,0);
+                mapout.obj1=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj2=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj3=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj4=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            elseif mapout.mapindex~=5&&playerguy.xpos<=410&&playerguy.xpos>=280&&playerguy.ypos<=260&&playerguy.ypos>=180;
+                mapout=map(5,280,180,140,90,imread('bckimg5.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,280:5:410,180,0,0,0);
+                mapout.b_up=myobject(0,0,0,280:5:410,260,0,0,0);
+                mapout.b_left=myobject(0,0,0,280,5,0,0,0);
+                mapout.b_right=myobject(0,0,0,410,5,0,0,0);
+                mapout.obj1=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj2=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj3=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj4=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            elseif mapout.mapindex~=6&&playerguy.xpos<=550&&playerguy.xpos>=420&&playerguy.ypos<=260&&playerguy.ypos>=180;
+                mapout=map(6,420,180,140,90,imread('bckimg6.png'),0,0,0,0,0,0,0,0,0);
+                mapout.b_down=myobject(0,0,0,420:5:550,180,0,0,0);
+                mapout.b_up=myobject(0,0,0,420:5:550,260,0,0,0);
+                mapout.b_left=myobject(0,0,0,420,5,0,0,0);
+                mapout.b_right=myobject(0,0,0,550,180:5:260,0,0,0);
+                mapout.obj1=myobject(true,true,2,520,220,10,10,imread('bossimg.png'));
+                mapout.obj2=myobject(false,true,0,500,190,10,10,imread('obs2.png'));
+                mapout.obj3=myobject(false,true,0,500,200,10,10,imread('obs2.png'));
+                mapout.obj4=myobject(0,0,0,0,0,0,0,0);
+                mapout.obj5=myobject(0,0,0,0,0,0,0,0);
+            end
+        end
+    end
+end
