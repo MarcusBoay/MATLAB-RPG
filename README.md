@@ -12,6 +12,7 @@ ____________________________________________________________________
 How to play:
 
 1) Find the file called 'RapidFantasy.m' and open it.
+
 2) Click the 'Start' button in MATLAB.
 
 3) ?????
