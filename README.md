@@ -1,21 +1,30 @@
 # RapidFantasy
 
 Description:
+
 Rapid Fantasy is an RPG programmed in MATLAB that is loosely based off the games Final Fantasy and Pokemon.
 Made by Wing Chuen Boay and Dat Nguyen.
 ____________________________________________________________________
 Requirements:
+
 You must use MATLAB R2015b to play this game!
 ____________________________________________________________________
 How to play:
+
 1) Find the file called 'RapidFantasy.m' and open it.
+
 2) Click the 'Start' button in MATLAB.
+
 3) ?????
+
 4) Enjoy!
 ____________________________________________________________________
 Basic in-game instructions:
+
 You can move around in the map using 'wasd' keys or arrow keys.
+
 You can open up the main menu by pressing 'm' in the map.
+
 You can interact with certain obstacles by pressing 'space bar' when facing them.
 ____________________________________________________________________
 
